@@ -1,0 +1,39 @@
+{
+  "name": "jest-code-coverage-protection",
+  "version": "1.0.0",
+  "description": "Basic Code Coverage Protection Utility for comparing coverage between branches",
+  "main": "jccp.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jschaftenaar/jest-code-coverage-protection.git"
+  },
+  "keywords": [
+    "code",
+    "coverage",
+    "protection",
+    "jest",
+    "node",
+    "js",
+    "javascript",
+    "output",
+    "comparison"
+  ],
+  "bin": {
+    "jccp": "./jccp.js"
+  },
+  "author": "Jeroen Schaftenaar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jschaftenaar/jest-code-coverage-protection/issues"
+  },
+  "homepage": "https://github.com/jschaftenaar/jest-code-coverage-protection#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "commander": "^6.1.0"
+  }
+}
