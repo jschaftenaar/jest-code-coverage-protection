@@ -49,12 +49,12 @@ const app = {
           console.log(`Less or no ${key} changes, cannot determine coverage difference, skipping`);
         } else {
           const coverageDiff = file.total[key].covered - compare.total[key].covered; // e.g. 18
-          const newCoverage = diff*parseFloat(options.new); // 60
-          const newCoveragePct = parseFloat(coverageDiff / diff * 100);
+          const newCoverage = diff*parseFloat(options.new).toFixed(2); // 60
+          const newCoveragePct = parseFloat(coverageDiff / diff * 100).toFixed(2);
           if (coverageDiff >= newCoverage) {
             console.log(`Coverage for ${key} inside limits, new code coverage is ${newCoveragePct}`);
           } else {
-            console.error(`Yikes, coverage for ${key} outside of limits, new code coverage is ${newCoveragePct}, was expecting at least ${parseFloat(options.new*100)}`);
+            console.error(`Yikes, coverage for ${key} outside of limits, new code coverage is ${newCoveragePct}, was expecting at least ${parseFloat(options.new*100).toFixed(2)}`);
             exitCode = 1;
           }
         }
