@@ -38,6 +38,15 @@ Options:
 - Run jccp command
 - Catch exit codes of jccp, 0 = coverage check passed, 1 = coverage check failed
 
+We run it in our workflow here: [.github/workflows/node.js.yml](https://github.com/jschaftenaar/jest-code-coverage-protection/blob/master/.github/workflows/node.js.yml)
+
+```
+git clone https://github.com/jschaftenaar/jest-code-coverage-protection --single-branch master
+cd master && npm ci && npm test && cd ..
+npm run jccp
+```
+The above method is by far the simplest way to add code coverage protection to your project. A more efficient but more involved way to setup code coverage protection is to commit your master/main coverage file on a special branch in your project and run your tests comparison file against that file
+
 ## Examples
 ```
 jccp -m new -n 0.9   <new code should have at least 90% code coverage>
