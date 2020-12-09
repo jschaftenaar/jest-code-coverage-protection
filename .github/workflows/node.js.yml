@@ -25,4 +25,4 @@ jobs:
     - run: npm test
     - run: git clone https://github.com/jschaftenaar/jest-code-coverage-protection --single-branch master
     - run: cd master && npm ci && npm test && cd ..
-    - run: npm jccp
+    - run: npm run jccp
